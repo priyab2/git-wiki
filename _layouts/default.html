@@ -64,7 +64,7 @@
           <span class="tools-element"><a target="_blank" href="{{ site.github.repository_url }}/blob/{{site.git_branch}}{{page.folder}}{{url | remove: '.html' | append: '.md'}}">Source</a></span>
         {% endif %}
         
-        {% if site.google_cse_token %}
+      {% if site.google_cse_token %}
           <script>
           (function() {
             var cx = "{{site.google_cse_token}}";
