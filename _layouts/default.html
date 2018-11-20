@@ -63,7 +63,7 @@
           <span class="tools-element"><a target="_blank" href="{{ site.github.repository_url }}/commits/{{site.git_branch}}{{page.folder}}{{url | remove: '.html' | append: '.md'}}">History</a></span>
           <span class="tools-element"><a target="_blank" href="{{ site.github.repository_url }}/blob/{{site.git_branch}}{{page.folder}}{{url | remove: '.html' | append: '.md'}}">Source</a></span>
         {% endif %}
-        <div></div>
+        <br>
           <form method="GET" action="{{ site.github.repository_url }}/search">
             <input type="text" name="q[]" placeholder="Text to search">
             {% if site.use_github_wiki %}
