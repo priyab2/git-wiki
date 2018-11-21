@@ -58,7 +58,7 @@ workflow CallReadMappingTask {
 The /src folder is broken up by stages. Inside the folder for each stage (i.e. AlignmentStage_WDL/) we have three subfolders that contain: (1) the library of tasks (Tasks/), (2) the suite of unit tests, one for each task (TestTasks/), and (3) the resultant workflow stage (Workflows/), which can be used for testing the integration of individual tasks into workflows. The files are named as per the function that they perform.  
 
 
-<img src="https://user-images.githubusercontent.com/4040442/34808799-cd56402e-f656-11e7-960a-7cb5803b1d0e.png" alt="Modularity implementation" width="800"> 
+<img align ="center" src="https://user-images.githubusercontent.com/4040442/34808799-cd56402e-f656-11e7-960a-7cb5803b1d0e.png" alt="Modularity implementation" width="800"> 
 
 
 
