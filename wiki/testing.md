@@ -1,9 +1,7 @@
 
 
 # Testing
-
 ## Unit testing
-
 ### Pre-flight QC
 
 To conduct unit tests on the Python scripts that handle pre-flight QC, cd into /path/to/MayomicsVC/src/config and run
@@ -36,9 +34,6 @@ Every task is a unit, and is tested by running as its own workflow. These unit t
    In the above command, "run" mode will execute a single workflow, and exit when the workflow completes (successfully or not). The "-i" is a flag which specifies the user to include a workflow input file.
    The "-p" flag points to a directory or zipfile to search for workflow imports. In the case of our workflow, use of the "-p" flag is mandatory. It specifies that source.zip is where the scripts to individual tasks are located. Information on how to execute a wdl script using cromwell can be found on the following link: 
    https://software.broadinstitute.org/wdl/documentation/execution.
-
-
-
 
 ## Integration testing
 
