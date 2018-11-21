@@ -1,74 +1,96 @@
-# Welcome yhgbkjklnlk 
-
-This is a [demo](wiki/Demo.md) of git-wiki theme for jekyll.
-
-it's a full featured wiki powered by git, github pages and pull-requests!
-
-It means: 
-
-* Improvements in the cooperative aspect: forks, pull-requests and roles.
-* You can customize your wiki as you want with style sheets and even changing the layout.
-* No databases! Only static files that can be downloaded in a few seconds.
-* Markdown and html mixed together!
-* History, revision comparison and everything you need from a wiki platform.
-* You can edit your pages with the standard git editor, prose.io (integrated) or any kind of editor you prefer.
-* Non-existent wiki page links are "[red](wiki/red.md)"
-
-You can fork/copy the master branch now and start your wiki in just 1 minute.
-
-**Note:**
-You can even include the [official github wiki](https://help.github.com/articles/about-github-wikis/) as a submodule and enable the option in our conf file to use github wiki pages in git-wiki system, but it's an experimental feature and it implies less advantages and greater disadvantages for now.
-
-## Who is using git-wiki
-
-[List of git-wiki installations](wiki/examples.md)
-
-[List of forked repository](https://github.com/Drassil/git-wiki/network/members)
 
 
-### [share your wiki with us!](wiki/examples.md) and keep the "Power by Git-Wiki" footer link please. It will help both of us!
+# Design principles
+
+## Modularity
+
+This workflow is modular by design, with each bioinformatics task in its own module. 
+WDL makes this easy by defining "tasks" and "workflows." [Tasks](#workflow-architecture)
+in our case will wrap individual bioinformatics steps comprising the workflow.
+Tasks can be run individually and also strung together into workflows.
+
+The variant calling workflow is complex, so we break it up into smaller subworkflows, or 
+[stages](#workflow-architecture) that are easier to develop and maintain. 
+Stages can be run individually and also called sequentially to execute the workflow fully or partially. 
+
+Reasons for modular design:
+* flexibility: can execute any part of the workflow 
+    * useful for testing or after failure
+    * can swap tools in and out for every task based on user's choice
+* optimal resource utilization: can specify ideal number of nodes, walltime, etc. for every stage
+* maintainability: can edit modules without breaking the rest of the workflow 
+    * modules like QC and user notification, which serve as plug-ins for other modules, can be changed without updating multiple places in the workflow
 
 
-## Installation instructions
+## Data parallelism and scalability
 
-1. Fork or copy [this repository](https://github.com/drassil/git-wiki)
+The workflow should run as a single multi-node job, handling the placement of tasks 
+across the nodes using embedded parallel mechanisms. Support is required for:
+* running one sample per node 
+* running multiple samples per node on clusters with and without node sharing.
 
-2. copy and rename _config.yml.dist in _config.yml changing settings inside
+The workflow must support repetitive fans and merges in the code (conditional on user choice in the runfile):
+* splitting of the input sequencing data into chunks, performing alignment in parallel on all chunks, 
+and merging the aligned files per sample for sorting and deduplication
+* splitting of aligned/dedupped BAMs for parallel realignment and recalibration per chromosome.
 
-3. create your index.md in root directory
-
-4. push your changes in your repository, then configure the github pages in your repository settings
-
-5. Your wiki is ready!
-
-**Note:**
-
-We suggest the creation of a /wiki/ subfolder that collects all your .md pages (except index.md)
-
-## Current known limitations
-
-* You can't use the wiki internal link format: [[example]]. Please, use gh-pages links instead: \[example\](example) . It's a known jekyll limitation: <https://jekyllrb.com/docs/templates/>
-
-## Customization
-
-You can create following files in _includes folder to costumize git-wiki without patching original code:
-
-* head.html  -> this file will be included in <head> tag allowing you to add **css/js** and any kind of head tags
-* sidebar.html -> this file will be included in left sidebar allowing you to create your widgets
-* comments.html -> this is mostly used to integrate social comments under page contents
-* footer.html -> this file will be included in left side of the footer.
-
-## Looking for collaboration
-
-Do you like this project? then, contact us via [chat](https://gitter.im/Drassil/general?utm_source=share-link&utm_medium=link&utm_campaign=share-link) , <a href="mailto:staff-drassil@googlegroups.com">email</a>  or send us a PR to improve it.
-
-Thank you!
-
-## Components used
-
-- [jekyll-table-of-contents](https://github.com/ghiculescu/jekyll-table-of-contents)
-
-- [jQuery](https://jquery.com/)
+The workflow should scale well with the number of samples - although that is a function 
+of the Cromwell execution engine. We will be benchmarking this feature (see Testing section below).
 
 
-[MIT LICENSE](LICENSE)
+
+## Real-time logging and monitoring, data provenance tracking
+
+The workflow should have a good system for logging and monitoring progress of the jobs. 
+At any moment during the run, the analyst should be able to assess: 
+* which stage of the workflow is running for every sample batch 
+* which samples may have failed and why 
+* which nodes the analyses are running on, and their health status. 
+
+Additionally, a well-structured post-analysis record of all events 
+executed on each sample is necessary to ensure reproducibility of 
+the analysis. 
+
+
+## Fault tolerance and error handling
+
+The workflow must be robust against hardware/software/data failure. It should:
+* give the user the option to fail or continue the whole workflow when something goes wrong with one of the samples
+* have the ability to move a task to a spare node in the event of hardware failure.
+
+The latter is a function of Cromwell, but the workflow should support it by requesting a few extra nodes (beyond the nodes required based on user specifications).
+
+To prevent avoidable failures and resource waste, the workflow should: 
+* check that all the sample files exist and have nonzero size before the workflow runs
+* check that all executables exist and have the right permissions before the workflow runs
+* after running each module, check that output was actualy produced and has nonzero size
+* perform QC on each output file, write results into log, give user option to continue even if QC failed.
+
+[User notification](#email-notifications) of success/failure will be implemented by capturing exit codes, 
+writing error messages into failure logs, and notifying the analyst of the success/failure status 
+via email or another notification system. We envision three levels of granularity for user 
+notification:
+* total dump of success/failure messages at the end of the workflow
+* notification at the end of a stage
+* notification at the end of a task.
+
+The level of granularity will be specified by users as an option in the runfile.
+
+
+## Portability
+
+The workflow should be able to port smoothly among the following four kinds of systems:
+* grid clusters with PBS Torque
+* grid clusters with OGE
+* AWS
+* MS Azure.
+
+
+## Development and test automation 
+
+The workflow should be constructed in such a way as to support multiple levels of automated [testing](#testing):
+* Unit testing on each task
+* Integration testing for each codepath in each workflow stage
+* Integration testing for the main (i.e. most used) codepath in the workflow
+* Regression testing on all of the above.
+
