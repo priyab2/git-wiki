@@ -1,8 +1,8 @@
 title: NCSA - Genomics
 description: 
 show_downloads: true
-git_branch: gh-pages
-logo_url: http://www.tompetty.com/sites/g/files/g2000007521/f/Sample-image10-highres.jpg
+git_branch: master
+logo_url: git-wiki/assets/images/sample.jpg
 google_analytics:
 theme: 
 wiki_folder: wiki
