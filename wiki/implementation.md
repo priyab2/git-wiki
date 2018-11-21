@@ -4,13 +4,13 @@
 
 ## Implementing modularity
 
-<img align="right" src="https://user-images.githubusercontent.com/4040442/34808679-108a8432-f656-11e7-856a-3542018692a0.png" alt="Image of Folder Structure" width="550">
+<img align="center" src="https://user-images.githubusercontent.com/4040442/34808679-108a8432-f656-11e7-856a-3542018692a0.png" alt="Image of Folder Structure" width="550">
 
 GenomeGPS consists of five component workflows. Each workflow may contain higher-level [modules](#modularity), which we call stages. For example, in BAM cleaning we have two stages: Alignment and Realignment/Recalibration.
 
 Each *stage* consists of *tasks* - lowest complexity modules that represent meaningful bioinformatics processing steps (green boxes in the [figure](https://user-images.githubusercontent.com/4040442/34805599-9179e4aa-f644-11e7-993e-c0e9ece4f015.png) on the right), such as alignment against a reference or deduplication of aligned BAMs. Tasks are written as .wdl scripts:
 
-&nbsp;&nbsp;<img align="right" src="https://user-images.githubusercontent.com/4040442/34805599-9179e4aa-f644-11e7-993e-c0e9ece4f015.png" alt="BAM cleaning with stages" height="850">
+<img align="right" src="https://user-images.githubusercontent.com/4040442/34805599-9179e4aa-f644-11e7-993e-c0e9ece4f015.png" alt="BAM cleaning with stages" height="850">
 
 ```WDL
 #BWAMemSamtoolView.wdl
@@ -58,7 +58,7 @@ workflow CallReadMappingTask {
 The /src folder is broken up by stages. Inside the folder for each stage (i.e. AlignmentStage_WDL/) we have three subfolders that contain: (1) the library of tasks (Tasks/), (2) the suite of unit tests, one for each task (TestTasks/), and (3) the resultant workflow stage (Workflows/), which can be used for testing the integration of individual tasks into workflows. The files are named as per the function that they perform.  
 
 
-<img align ="center" src="https://user-images.githubusercontent.com/4040442/34808799-cd56402e-f656-11e7-960a-7cb5803b1d0e.png" alt="Modularity implementation" width="800"> 
+&nbsp;&nbsp;<img align ="center" src="https://user-images.githubusercontent.com/4040442/34808799-cd56402e-f656-11e7-960a-7cb5803b1d0e.png" alt="Modularity implementation" width="800"> 
 
 
 
