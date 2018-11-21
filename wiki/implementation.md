@@ -4,7 +4,7 @@
 
 ## Implementing modularity
 
-<img align="center" src="https://user-images.githubusercontent.com/4040442/34808679-108a8432-f656-11e7-856a-3542018692a0.png" alt="Image of Folder Structure" width="550">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img align="center" src="https://user-images.githubusercontent.com/4040442/34808679-108a8432-f656-11e7-856a-3542018692a0.png" alt="Image of Folder Structure" width="550">
 
 GenomeGPS consists of five component workflows. Each workflow may contain higher-level [modules](#modularity), which we call stages. For example, in BAM cleaning we have two stages: Alignment and Realignment/Recalibration.
 
