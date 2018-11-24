@@ -4,7 +4,7 @@ show_downloads: true
 comments: true
 logo_url: git-wiki/assets/images/sample.jpg
 google_analytics:
-git_branch: gh-pages
+git_branch: http://cmwr2012.cee.illinois.edu/images/ncsa_vertical.png
 theme: 
 use_github_wiki: false
 use_prose_io: true
