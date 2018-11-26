@@ -7,28 +7,3 @@ Modules
   <li><a href="/git-wiki/wiki/testing.html">Testing</a>
   <li><a href="/git-wiki/">Other</a></li>
 </ul>
-      <div id="tools-buttons" style="width: 100%; text-align: left">
-        {% if site.google_cse_token %}
-          <script>
-          (function() {
-            var cx = "{{site.google_cse_token}}";
-            var gcse = document.createElement('script');
-            gcse.type = 'text/javascript';
-            gcse.async = true;
-            gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
-            var s = document.getElementsByTagName('script')[0];
-            s.parentNode.insertBefore(gcse, s);
-          })();
-          </script>
-          <gcse:search></gcse:search>
-        {% else %}
-          <form method="GET" action="{{ site.github.repository_url }}/search">
-            {% if site.use_github_wiki %}
-              <input type="hidden" name="type" value="Wikis">
-            {% endif %}
-            <input class="search-text" type="text" name="q" placeholder="Text to find"><input class="search-button" type="submit" value="Search">
-          </form>
-        {% endif %}
-
-     
-      </div>
