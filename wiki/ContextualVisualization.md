@@ -8,3 +8,6 @@ The visualisation is helpful for future game developers as it helps to form a ba
 
 # Competitive Analysis of Playstore
 The below given plot displays AppStore data this visualizes a competitive analysis and compares whether are the game ratings in Apple and Android store similar or different and to what extent it is different and from the below visualization it is clear that 'Games' are popular both on the AppStore and GooglePlaystore.
+
+<center> <img align ="center" src="https://user-images.githubusercontent.com/43070131/56473114-37433200-642c-11e9-9b2c-b35e44646a22.PNG" alt="Modularity implementation" width="600"> </center>
+
