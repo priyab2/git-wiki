@@ -2,5 +2,5 @@
 
 # Data Visualizations of Google Playstore Data
 
-<img align ="center" src="https://user-images.githubusercontent.com/4040442/34808799-cd56402e-f656-11e7-960a-7cb5803b1d0e.png" alt="Modularity implementation" width="800"> 
+<img align ="center" src="https://user-images.githubusercontent.com/43070131/56471231-af522d80-6415-11e9-925e-5b4926c33ddf.jpg" alt="Modularity implementation" width="800"> 
 
