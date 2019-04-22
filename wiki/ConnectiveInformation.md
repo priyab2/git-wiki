@@ -7,7 +7,7 @@
 
 Sentiment Polarity identifies the depth of the positive/negative/neutral sentiment whereas the Sentiment Subjectivity score helps to determine the extent of subjectiveness in the review. Subjectivity is the quality of being based on or influenced by personal feelings, tastes, or opinions. For instance, if a person has given a positive review, mentioning, The app is very useful to help him maintain his diet, this review will have a high subjective score as it may not be necessary that the app may help any other individual. 
 
-The dataset googleplaystore.csv is used 
+The dataset googleplaystore.csv is used to find co-relation analysis between reviews and installs and also most common apps. 
 
 # Part 2
 <b>Datasets used:</b> googleplaystore.csv
