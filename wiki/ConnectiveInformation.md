@@ -1,5 +1,5 @@
 # Part 1
-<b>Datasets Used:</b> googleplaystore
+<b>Datasets Used:</b> googleplaystore.csv, googleplaystore_user_reviews.csv
 
 <b>Datasets link:</b> https://uofi.box.com/s/wdx9lojhfyvghu4ctfx6pq0gj2fblbq1
 
@@ -7,14 +7,14 @@
 Sentiment Polarity identifies the depth of the positive/negative/neutral sentiment whereas the Sentiment Subjectivity score helps to determine the extent of subjectiveness in the review. Subjectivity is the quality of being based on or influenced by personal feelings, tastes, or opinions. For instance, if a person has given a positive review, mentioning, The app is very useful to help him maintain his diet, this review will have a high subjective score as it may not be necessary that the app may help any other individual. 
 
 # Part 2
-<b>Datasets used:</b>
+<b>Datasets used:</b> googleplaystore.csv
 
 <b>Datasets link:</b> https://uofi.box.com/s/wdx9lojhfyvghu4ctfx6pq0gj2fblbq1
 
 <b>Visualization:</b> The data sets in this part of the project are used to display visualizations that compare the popularity of the data that is back dated to 20 years. The pie chart in the visualization helps to determine the distribution of the top Genre’s of games over the past 20 years. The data set is also useful to perform a competitive analysis of the comparison of the popularity of the games between the Apple playstore and Android playstore. This helps us to understand a broader overview about various factors within games.
 
 # Part 3
-<b>Datasets Used:</b>
+<b>Datasets Used:</b> ign.csv, Applestore.csv
 
 <b>Datasets link:</b> https://uofi.box.com/s/wdx9lojhfyvghu4ctfx6pq0gj2fblbq1
 
