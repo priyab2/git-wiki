@@ -3,7 +3,7 @@
 
 <b>Datasets link:</b> https://uofi.box.com/s/wdx9lojhfyvghu4ctfx6pq0gj2fblbq1
 
-Visualization: The dataset used in this part helps to identify the co-relation between various sentimental factors amongst various users when it comes to rating playstore apps. Users ratings play a very critical role in determining the popularity of the app. Hence, the visualizations help to determine the analysis of Sentiment Polarity and Subjectivity. 
+<b>Visualization: </b> The dataset used in this part helps to identify the co-relation between various sentimental factors amongst various users when it comes to rating playstore apps. Users ratings play a very critical role in determining the popularity of the app. Hence, the visualizations help to determine the analysis of Sentiment Polarity and Subjectivity. 
 Sentiment Polarity identifies the depth of the positive/negative/neutral sentiment whereas the Sentiment Subjectivity score helps to determine the extent of subjectiveness in the review. Subjectivity is the quality of being based on or influenced by personal feelings, tastes, or opinions. For instance, if a person has given a positive review, mentioning, The app is very useful to help him maintain his diet, this review will have a high subjective score as it may not be necessary that the app may help any other individual. 
 
 # Part 2
