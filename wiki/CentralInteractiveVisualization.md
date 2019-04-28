@@ -8,18 +8,7 @@
 
 Please follow the below steps after clicking the link:
 
-1. Open file Final_Project_Part2_notebook1.ipynb and run the steps.
+1. Open file Project_dataVis.ipynb for running jupyter notebook.
+2. Run Project_dataVis_summary.html for interactive visualization.
 
-2. If the libraries are not installed in your system, please run the below piece of code before the first piece of code in the program
-
-
-```
-!pip install pandas
-!pip install matplotlib
-!pip install bqplot
-!pip install traitlets
-!pip install seaborn
-```
-
-3. Edit the link of the file, if you have downloaded the dataset, mention the link as per the file location or just remove the entire link before googleplaystore.csv
 
