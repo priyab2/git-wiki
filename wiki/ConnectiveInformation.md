@@ -37,3 +37,8 @@ The dataset googleplaystore.csv is used to find co-relation analysis between rev
 <b>Datasets link:</b> <a href = "https://uofi.box.com/s/wdx9lojhfyvghu4ctfx6pq0gj2fblbq1"> Click to view dataset </a>
 
 <b>Visualization:</b> The data sets in this part of the project are used to display visualizations that compare the popularity of the data that is back dated to 20 years. The pie chart in the visualization helps to determine the distribution of the top Genre’s of games over the past 20 years. The data set is also useful to perform a competitive analysis of the comparison of the popularity of the games between the Apple playstore and Android playstore. This helps us to understand a broader overview about various factors within games.
+
+<img src="https://user-images.githubusercontent.com/43070131/56472427-f21b0200-6423-11e9-8d9e-097036f42a18.PNG" alt="Modularity implementation" width="700"> 
+
+<img src="https://user-images.githubusercontent.com/43070131/56473114-37433200-642c-11e9-9b2c-b35e44646a22.PNG" alt="Modularity implementation" width="700">
+
