@@ -26,9 +26,9 @@ The dataset googleplaystore.csv is used to find co-relation analysis between rev
 
 <b>Visualization:</b>  The datasets selected for displaying the various visualizations are interconnected to each other that helps us to gain a brief overview about the various trends of the Google playstore data. The googleplaystore.csv file is used to arrive at the visualizations. The dataset stores the details of the applications on Google Play. It has 13 features for each application, that allows us to explore the various applications in depth and perform analysis out of the dataset to derive significant trends from the heat map and bar plot visualizations.
 
-<img src="https://user-images.githubusercontent.com/43070131/56891545-74b64980-6a42-11e9-8595-e09e0ac6181a.jpg" width="700">
+<img src="https://user-images.githubusercontent.com/43070131/56892105-31f57100-6a44-11e9-8b5b-b25eb21a3f7f.jpg" width="700">
 
-<img src="https://user-images.githubusercontent.com/43070131/56891561-80097500-6a42-11e9-92fe-589d75c48dc3.jpg" width="700">
+<img src="https://user-images.githubusercontent.com/43070131/56892123-4174ba00-6a44-11e9-9e01-76ce9449e89b.jpg" width="700">
 
 
 # Part 3
