@@ -7,13 +7,17 @@
 
 Sentiment Polarity identifies the depth of the positive/negative/neutral sentiment whereas the Sentiment Subjectivity score helps to determine the extent of subjectiveness in the review. Subjectivity is the quality of being based on or influenced by personal feelings, tastes, or opinions. For instance, if a person has given a positive review, mentioning, The app is very useful to help him maintain his diet, this review will have a high subjective score as it may not be necessary that the app may help any other individual. 
 
-<img src="https://user-images.githubusercontent.com/43070131/56891202-513ecf00-6a41-11e9-9629-75b8a3f60e77.PNG" width="600">
+<img src="https://user-images.githubusercontent.com/43070131/56891202-513ecf00-6a41-11e9-9629-75b8a3f60e77.PNG" width="700">
 
-<img src="https://user-images.githubusercontent.com/43070131/56891219-61ef4500-6a41-11e9-9ea3-c994ab936e44.PNG" width="600">
+<img src="https://user-images.githubusercontent.com/43070131/56891219-61ef4500-6a41-11e9-9ea3-c994ab936e44.PNG" width="700">
 
-<img src="https://user-images.githubusercontent.com/43070131/56891243-79c6c900-6a41-11e9-8750-ab3c52749c17.PNG" width="600">
+<img src="https://user-images.githubusercontent.com/43070131/56891243-79c6c900-6a41-11e9-8750-ab3c52749c17.PNG" width="700">
 
 The dataset googleplaystore.csv is used to find co-relation analysis between reviews and installs and also most common apps. 
+
+<img src="https://user-images.githubusercontent.com/43070131/56891545-74b64980-6a42-11e9-8595-e09e0ac6181a.jpg" width="700">
+
+<img src="https://user-images.githubusercontent.com/43070131/56891561-80097500-6a42-11e9-92fe-589d75c48dc3.jpg" width="700">
 
 # Part 2
 <b>Datasets used:</b> googleplaystore.csv
@@ -21,6 +25,11 @@ The dataset googleplaystore.csv is used to find co-relation analysis between rev
 <b>Datasets link:</b> <a href = "https://uofi.box.com/s/wdx9lojhfyvghu4ctfx6pq0gj2fblbq1"> Click to view dataset </a>
 
 <b>Visualization:</b>  The datasets selected for displaying the various visualizations are interconnected to each other that helps us to gain a brief overview about the various trends of the Google playstore data. The googleplaystore.csv file is used to arrive at the visualizations. The dataset stores the details of the applications on Google Play. It has 13 features for each application, that allows us to explore the various applications in depth and perform analysis out of the dataset to derive significant trends from the heat map and bar plot visualizations.
+
+<img src="https://user-images.githubusercontent.com/43070131/56891545-74b64980-6a42-11e9-8595-e09e0ac6181a.jpg" width="700">
+
+<img src="https://user-images.githubusercontent.com/43070131/56891561-80097500-6a42-11e9-92fe-589d75c48dc3.jpg" width="700">
+
 
 # Part 3
 <b>Datasets Used:</b> ign.csv, Applestore.csv
